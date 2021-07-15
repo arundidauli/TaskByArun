@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/padding_8dp"
+    app:cardElevation="6sp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/file"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:layout_margin="@dimen/padding_8dp"
+            android:src="@mipmap/ic_launcher" />
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/file"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp">
+            <TextView
+                android:id="@+id/fileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:text="@string/app_name"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/fileDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="13sp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="@string/app_name"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/fileSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:text="14:17"
+                    />
+
+                <View
+                    android:layout_width="0.78sp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="@dimen/padding_8dp"
+                    android:layout_marginEnd="@dimen/padding_8dp"
+                    android:background="@color/gray"/>
+                <TextView
+                    android:id="@+id/noOfPages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:text="Pgs : 1"
+                 />
+                <View
+                    android:layout_width="0.78sp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="@dimen/padding_8dp"
+                    android:layout_marginEnd="@dimen/padding_8dp"
+                    android:background="@color/gray"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_verified_user_24"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fileType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_marginTop="4dp"
+                android:paddingBottom="2dp"
+                android:textSize="12sp"
+                android:paddingTop="2dp"
+                android:paddingStart="@dimen/padding_8dp"
+                android:paddingEnd="@dimen/padding_8dp"
+                android:background="@drawable/round_border"
+                android:text="A4"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
